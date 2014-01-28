@@ -112,8 +112,10 @@ extern void delay(unsigned long ms);
 #define NVIC_PENDSVSET				(1UL << 28UL)	//0x10000000
 #define NVIC_PENDSVCLR				(1UL << 27UL)	//0x08000000
 
-#define PROCESS_STACK0_SIZE			0x800	/* Process stack0 size */
-#define PROCESS_STACK1_SIZE			0x400	/* Process stack1 size */
+/* If TROPICSSL_MEMORY_BUFFER_ALLOC_C macro is not defined in tropicssl/config.h, et this to 0x800 */
+#define PROCESS_STACK0_SIZE			0x500	/* Minimum process stack0 size, used by Spark_Process_Task */
+/* If static memory buffer allocation is not used in tropicssl, set this to 0x400 or less */
+#define PROCESS_STACK1_SIZE			0x500	/* Variable process stack1 size, used by Wiring_Process_Task */
 
 #define PROCESS_STACK_NOT_ACTIVE	-1		/* Process stack not active */
 #define PROCESS_STACK0_ACTIVE		0		/* Process stack0 active */
