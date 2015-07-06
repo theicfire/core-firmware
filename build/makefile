@@ -266,7 +266,11 @@ clean:
 	@$(MAKE) -C $(PROJECT_DIR)$(LIB_CORE_COMMUNICATION_PATH)build clean $(MAKE_ARGS)
 	@echo
 
-.PHONY: all clean check_external_deps elf bin hex size program-dfu program-cloud
+# Chase
+dfu:
+	curl https://api.particle.io/v1/devices/54ff6f066672524844550167/dfu -d access_token=eb35c4c01ccb75ac0611d8f6bf7238738837769a -d params=on
+
+.PHONY: all clean check_external_deps elf bin hex size program-dfu program-cloud dfu
 .SECONDARY:
 
 # Include auto generated dependency files
