@@ -1,3 +1,13 @@
+# Chase Changes
+To get my cool wifi program working:
+- `cd applications`
+- `git clone git@github.com:theicfire/Manchester_Library.git manchester`
+- Put the spark core in dfu mode
+- `cd ../build`
+- `make program-dfu APP=manchester`
+
+
+
 # Spark Core Firmware [![Build Status](https://travis-ci.org/spark/firmware.svg)](https://travis-ci.org/spark/firmware)
 
 This is the main source code repository of the Spark Core firmware libraries.
