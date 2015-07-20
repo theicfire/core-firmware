@@ -1,7 +1,7 @@
 # Chase Changes
 To get my cool wifi program working:
 - `cd applications`
-- `git clone git@github.com:theicfire/Manchester_Library.git manchester`
+- `git clone git@github.com:theicfire/Manchester_Library.git manchester` (yeah I know, subtrees, submodules kinda fix this. But I'm not convinced it's that great)
 - Put the spark core in dfu mode
 - `cd ../build`
 - `make program-dfu APP=manchester`
